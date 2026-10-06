@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reddit 阅读手帖 · 迪迪碎碎念</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header class="masthead">
+    <div class="identity"><img src="assets/didi-avatar.jpg" alt="迪迪碎碎念头像" width="32" height="32"><span>迪迪碎碎念<small>工具手帖</small></span></div>
+    <span class="edition">Reddit / v0.2</span>
+  </header>
+  <main>
+    <section class="intro"><p class="kicker">Reddit 阅读手帖</p><h1>把讨论，变成线索。</h1><p class="deck">选一组真实讨论，带着来源交给 AI。</p></section>
+    <section class="source" aria-label="当前页面"><span class="source-label">正在阅读</span><strong id="community">等待 Reddit 页面</strong><p id="page">正在识别…</p></section>
+    <section class="controls" aria-labelledby="mode-label">
+      <div class="section-heading"><h2 id="mode-label">采集方式</h2><span id="mode-hint">保留当前页面条件</span></div>
+      <div id="modes" class="mode-grid" role="group" aria-label="采集方式">
+        <button class="mode" data-mode="current" aria-pressed="true">当前页</button>
+        <button class="mode" data-mode="new" aria-pressed="false">最新</button>
+        <button class="mode" data-mode="hot" aria-pressed="false">热门</button>
+        <button class="mode" data-mode="rising" aria-pressed="false">上升</button>
+        <button class="mode" data-mode="top" aria-pressed="false">高分排行</button>
+        <button class="mode" data-mode="controversial" aria-pressed="false">争议讨论</button>
+        <button class="mode search-mode" data-mode="search" aria-pressed="false">关键词搜索</button>
+      </div>
+      <div id="search-fields" hidden><label for="query">搜索关键词</label><input id="query" type="search" autocomplete="off" placeholder="例如：stroller / 安装 / 收纳" maxlength="512"><div class="field"><label for="sort">搜索排序</label><select id="sort"><option value="relevance">相关度</option><option value="new">最新</option><option value="top">得分</option><option value="comments">评论数量</option><option value="hot">热度</option></select></div></div>
+      <div class="field-row"><div id="time-field" class="field" hidden><label for="time">时间范围</label><select id="time"><option value="hour">近一小时</option><option value="day">近一天</option><option value="week">近一周</option><option value="month" selected>近一月</option><option value="year">近一年</option><option value="all">全部时间</option></select></div><div class="field"><label for="limit">数量上限</label><select id="limit"><option value="25">25 条</option><option value="50">50 条</option><option value="100" selected>100 条</option></select></div></div>
+      <details class="url-details"><summary>查看生成的网址</summary><p id="target"></p></details>
+    </section>
+    <section class="export" aria-label="下载数据"><div class="export-heading"><h2>带走这份讨论</h2><p>CSV 精简字段，JSON 保留原始数据。</p></div><div class="actions"><button id="csv" class="primary" disabled>下载 CSV <span aria-hidden="true">↓</span></button><button id="json" class="secondary" disabled>下载 JSON <span aria-hidden="true">↓</span></button><button id="view" class="text-button" disabled>查看 JSON</button></div><p id="status" role="status" aria-live="polite"></p></section>
+    <details class="notes"><summary>关于帖子与评论</summary><p>社区与搜索导出帖子列表；帖子详情导出本次返回的帖子及评论，未展开评论不会自动补全。返回数量可能少于上限，访问受 Reddit 认证和限制影响。</p><p>打开弹窗识别当前 URL；点击下载向 Reddit 请求所选内容并在本机导出，不上传给开发者或 AI。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details>
+  </main>
+  <footer><span>迪迪碎碎念的阅读手帖</span><span>留一点线索，给下一次灵感。</span></footer>
+  <script type="module" src="popup.js"></script>
+</body></html>

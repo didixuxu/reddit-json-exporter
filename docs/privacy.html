@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reddit 一键导出 · 隐私政策</title><style>body{max-width:780px;margin:40px auto;padding:0 24px;color:#1c2438;font:16px/1.9 system-ui,sans-serif;border-top:4px solid #002fa7}h1,h2,a{color:#002fa7}h1{font-size:28px}h2{font-size:20px;margin-top:28px}small{color:#667182}</style></head><body>
+<h1>Reddit 一键导出 · 隐私政策</h1><small>开发者品牌：迪迪碎碎念 · 适用版本：0.2.2 · 更新日期：2026-10-06</small>
+<p>本扩展的单一用途是：在用户主动操作时，将选定 Reddit 社区、搜索或帖子页面返回的讨论数据导出为本机 JSON 或 CSV 文件。扩展不会自动调用 AI。</p>
+<h2>处理哪些信息</h2><p>打开扩展弹窗时，扩展读取当前活动标签页的 URL，以识别是否为支持的 Reddit 页面并显示来源。扩展在弹窗中临时处理该 URL、用户输入的搜索关键词、排序、时间范围和数量选择。</p><p>用户点击下载后，扩展向对应 Reddit 地址发送 HTTPS 请求，并处理返回的帖子、评论、正文、标题、ID、得分、评论数量及来源链接等内容。原始 JSON 可能包含 Reddit 返回的作者用户名和其他公开元数据；正文也可能包含发布者自行公开的信息。CSV 仅保留界面说明的精简字段。</p>
+<h2>用途与传输</h2><p>上述信息仅用于识别当前页面、构建用户选择的请求、在弹窗内展示下载状态，以及生成导出文件。请求和搜索关键词发送给 Reddit；请求可能由浏览器附带当前 Reddit 登录会话。扩展不读取密码或 cookie 值，不申请 cookies 权限。</p><p>扩展不设开发者数据服务器，不向开发者、广告商、统计服务或 AI 服务上传 URL、关键词、帖子或评论，不包含广告、遥测、分析 SDK 或远程可执行代码。Reddit 对请求及会话信息的处理适用其自身政策。</p>
+<h2>本机保存与删除</h2><p>取得的数据在扩展弹窗运行期间的内存中处理。扩展没有使用 Chrome storage、同步存储、数据库或后台服务来保存浏览记录和导出数据。用户下载的 JSON/CSV 文件保存在浏览器指定的本机下载位置，保留到用户自行删除；关闭扩展弹窗不会删除已下载文件。临时下载对象 URL 会在代码设置的计时器运行时被释放，或随弹窗文档关闭而释放。</p><p>用户可关闭弹窗结束当前处理，删除下载文件，或卸载扩展。若用户自行把文件上传给其他 AI 或第三方服务，该操作不由扩展执行，应由用户按相应服务的隐私政策判断。</p>
+<h2>权限说明</h2><p><strong>activeTab：</strong>用于用户打开扩展时识别当前标签页 URL，而非读取全部浏览历史。<br><strong>www.reddit.com、old.reddit.com、reddit.com 网站权限：</strong>支持用户选择的 Reddit 网页 JSON 请求。虽然浏览器授予相应网站权限，扩展没有内容脚本或后台监听，不会持续扫描 Reddit 页面。</p>
+<h2>数据用途承诺</h2><p>本扩展对用户数据的使用遵守 Chrome Web Store User Data Policy，包括 Limited Use 要求。数据仅用于上述用户可见的导出功能，不出售、不用于广告、不用于与该功能无关的转移或信用评估。开发者不会通过本扩展查看用户的导出内容。</p>
+<h2>支持与更新</h2><p>与本扩展有关的问题，可通过 <a href="https://github.com/didixuxu/reddit-json-exporter/issues">GitHub Issues</a> 联系迪迪碎碎念。请勿在公开 Issue 中上传账号密码、cookie 或包含个人信息的导出文件。隐私政策随版本变化更新，并标明更新日期。</p>
+</body></html>

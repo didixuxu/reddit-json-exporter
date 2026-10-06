@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit 一键导出 · 迪迪碎碎念",
+  "version": "0.2.2",
+  "description": "迪迪碎碎念的 Reddit 阅读手帖：支持七种采集方式，导出 JSON 或 AI 可读 CSV。",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.reddit.com/*",
+    "https://old.reddit.com/*",
+    "https://reddit.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Reddit 一键导出",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src https://www.reddit.com https://old.reddit.com https://reddit.com"
+  }
+}

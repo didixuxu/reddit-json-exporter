@@ -1,0 +1,8 @@
+.DS_Store
+dist/
+node_modules/
+.env
+.env.*
+*.log
+*.crx
+*.pem
